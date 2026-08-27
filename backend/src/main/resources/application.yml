@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: job-tracker-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/jobtracker}
+    username: ${SPRING_DATASOURCE_USERNAME:jobtracker}
+    password: ${SPRING_DATASOURCE_PASSWORD:jobtracker}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+server:
+  port: ${SERVER_PORT:8080}
